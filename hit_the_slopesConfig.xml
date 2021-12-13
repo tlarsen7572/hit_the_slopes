@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<AlteryxJavaScriptPlugin>
+  <EngineSettings EngineDll="Macro" EngineDllEntryPoint="C:\ProgramData\Alteryx\Tools\hit_the_slopes\Hit The Slopes.yxmc" SDKVersion="10.1" />
+  <GuiSettings Html="hit_the_slopes.html" Icon="hit_the_slopes.png" Help="" SDKVersion="10.1">
+    <InputConnections>
+      <Connection Name="Input" AllowMultiple="False" Optional="False" Type="Connection" Label=""/>
+    </InputConnections>
+    <OutputConnections>
+      <Connection Name="Output" AllowMultiple="False" Optional="False" Type="Connection" Label=""/>
+    </OutputConnections>
+  </GuiSettings>
+  <Properties>
+    <MetaInfo>
+      <Name>Hit The Slopes</Name>
+      <Description>Calculate the slope, and the quality of the fit (r squared), for a rolling window of records in the dataset.</Description>
+      <CategoryName>Laboratory</CategoryName>
+      <SearchTags>slope</SearchTags>
+      <ToolVersion>1.00</ToolVersion>
+      <Author>tlarsendataguy</Author>
+      <Company></Company>
+      <Copyright>2022</Copyright>
+    </MetaInfo>
+  </Properties>
+</AlteryxJavaScriptPlugin>

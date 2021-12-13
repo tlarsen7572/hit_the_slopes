@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html style="padding:20px">
+<head>
+  <meta charset="utf-8">
+  <title>Hit The Slopes</title>
+  <script type="text/javascript">
+    document.write('<link rel="import" href="' + window.Alteryx.LibDir + '2/lib/includes.html">');
+  </script>
+</head>
+<body>
+  <div class=''>
+	<label>XMSG("Field with X values:")</label>
+	<ayx data-ui-props="{type: 'DropDown'}" data-item-props="{dataName: 'X', dataType: 'FieldSelector', fieldType: 'numeric'}"></ayx>
+	<br>
+	<label>XMSG("Field with Y values:")</label>
+	<ayx data-ui-props="{type: 'DropDown'}" data-item-props="{dataName: 'Y', dataType: 'FieldSelector', fieldType: 'numeric'}"></ayx>
+	<br>
+	<label>XMSG("Number of observations in each window:")</label>
+	<ayx data-ui-props="{type: 'NumericSpinner'}" data-item-props="{dataName: 'Window', dataType: 'ConstrainedInt', min: 2}"></ayx>
+	<br>
+	<label>XMSG("Group by:")</label>
+	<ayx data-ui-props="{type: 'ListBox'}" data-item-props="{dataName: 'GroupBy', dataType: 'FieldSelectorMulti', fieldType: 'NoBinary'}"></ayx>
+  </div>
+</body>
+</html>
