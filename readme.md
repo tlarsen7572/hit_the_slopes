@@ -73,3 +73,5 @@ If we chart the slope and r<sup>2</sup> alongside the X and Y values, we get the
 ![line chart](/images/slope_and_r_squared.PNG "Slope and r squared")
 
 In this example, seeing the evolution of slope and r<sup>2</sup> over time lets you know that, initially, the data is very linear at a slope of 0.1. However, starting at time 9, the slope changes to become much steeper. We see r<sup>2</sup> degrade sharply and gradually recover as the slope increases to its new equilibrium. If we were viewing these charts in real time, we would be able to identify a change to our equilibrium starting at time 9. By time 13 we could identify the new equilibrium and begin to make assumptions about the future state of the system.
+
+![workflow](/images/workflow.PNG "Example workflow")
