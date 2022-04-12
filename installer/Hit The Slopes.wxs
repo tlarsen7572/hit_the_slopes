@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<Wix xmlns='http://schemas.microsoft.com/wix/2006/wi'>
+    <Product Name='Hit The Slopes' Manufacturer='tlarsendataguy'
+        Id='03122a89-a7bd-4f89-8800-4a4cac0ed559' 
+		UpgradeCode='d9d96ac1-f40b-4ebd-83fd-f17c4c18fa09'
+        Language='1033' Codepage='1252' Version='1.0.0'>
+		<Package Id='*' Keywords='Installer' Description="Hit The Slopes installer"
+			Comments='Calculate the slope, and the quality of the fit (r squared), for a rolling window of records in the dataset.' Manufacturer='tlarsendataguy'
+			InstallerVersion='200' Languages='1033' Compressed='yes' SummaryCodepage='1252' Platform="x64" />
+
+		<Icon Id="icon.ico" SourceFile="icon.ico"/>
+		<Property Id="ARPPRODUCTICON" Value="icon.ico" />
+		
+		<Media Id='1' Cabinet='hit_the_slopes.cab' EmbedCab='yes' />
+		
+		<Directory Id='TARGETDIR' Name='SourceDir'>
+			<Directory Id='CommonAppDataFolder' Name='ProgramData'>
+				<Directory Id='ALTERYXCOMMONDATA' Name='Alteryx'>
+					<Directory Id='ALTERYXTOOLSFOLDER' Name='Tools'>
+						<Directory Id='HIT_THE_SLOPES' Name='hit_the_slopes'>
+							<Component Id='hit_the_slopes_Component' Guid='15350808-c7a0-41e3-89a9-e23e4715498f'>
+								<File Id='hit_the_slopes_Ui' Name='hit_the_slopes.html' DiskId='1' Source='..\hit_the_slopes.html' />
+								<File Id='hit_the_slopes_Icon' Name='hit_the_slopes.png' DiskId='1' Source='..\hit_the_slopes.png' />
+								<File Id='hit_the_slopes_Config' Name='hit_the_slopesConfig.xml' DiskId='1' Source='..\hit_the_slopesConfig.xml' />
+								<File Id='hit_the_slopes_macro' Name='Hit The Slopes.yxmc' DiskId='1' Source='..\Hit The Slopes.yxmc' />
+							</Component>
+						</Directory>
+					</Directory>
+				</Directory>
+			</Directory>
+		</Directory>
+
+		<Feature Id='Complete' Level='1'>
+		  <ComponentRef Id='hit_the_slopes_Component' />
+		</Feature>
+
+		<UIRef Id="WixUI_Minimal" />
+		<UIRef Id="WixUI_ErrorProgressText" />
+		<WixVariable Id="WixUILicenseRtf" Value="License.rtf" />
+		<WixVariable Id="WixUIDialogBmp" Value="dialog.bmp" />
+	</Product>
+</Wix>
